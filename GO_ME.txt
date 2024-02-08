@@ -1,0 +1,16 @@
+# Go Essentials: Values, Basic Types and Core Lang Features
+
+    #Key Components                     //use 'go run <file_name>' to run file, or 'go build' to run application (cannot run without creating a module -- 'go mod init example.com/first-go-ap')
+                                        //run a file with './first-go-app (or file_name)
+package main                            //split packages among program, can have multiple packages in one file and multiple files in one
+                                        //package, ORGANIZES CODE
+
+import "fmt"                            //built in package that gives standard fxns and packages
+
+func main() {                           //calling function, must be called main because Go executes main fxn to start a program
+    fmt.Print("Hello World")            //executes command, main application code should be wrapped into this fxn, only one main fxn
+}
+
+
+
+    #Values and Types
