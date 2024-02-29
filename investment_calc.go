@@ -49,10 +49,12 @@ func outputText(text string) { // can then use this in place of fmt.Print above
 	fmt.Print(text)
 }
 
-// ^add return value types here	(if using more than one must wrap in ())
-func calculateFutureValue(investmentAmount, expectedReturnRate, years float64) (float64, float64) { // to create own fxn math.Pow to return (can return multiple values by separating with comma)
-	fv := investmentAmount * math.Pow(1+expectedReturnRate/100, years)
-	rfv := fv / math.Pow(1+inflationRate/100, years)
-	return fv, rfv
+// ^add return value types here	(if using more than one must wrap in parenthesis (int, int))
+func calculateFutureValue(investmentAmount, expectedReturnRate, years float64) (fv float64, rfv float64) { // create own fxn math.Pow to return (can return multiple values by separating with comma)
+	// fv := investmentAmount * math.Pow(1+expectedReturnRate/100, years)
+	// rfv := fv / math.Pow(1+inflationRate/100, years)
+	fv = investmentAmount + math.Pow(1+expectedReturnRate/100, years)
+	rfv = fv / math.Pow(1+inflationRate/100, years)
+	return fv, rfv // instead of writing return, can also describe in return value types above (fv float64, rfv float64) thus you do not need :=, can just assign as =
 
 }
